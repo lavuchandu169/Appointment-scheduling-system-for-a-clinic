@@ -1,0 +1,60 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif; /* Set font family */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    height: 100vh; /* Set height to full viewport height */
+    background-color: #f4f4f4; /* Set background color */
+}
+
+/* Container styles */
+.container {
+    background-color: #fff; /* Set background color */
+    padding: 20px; /* Add padding */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+/* Form styles */
+form {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items in column */
+}
+
+/* Label styles */
+label {
+    margin-bottom: 8px; /* Add space below labels */
+}
+
+/* Input styles */
+input {
+    padding: 8px; /* Add padding */
+    margin-bottom: 16px; /* Add space below inputs */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 4px; /* Add rounded corners */
+}
+
+/* Button styles */
+button {
+    padding: 10px; /* Add padding */
+    background-color: #4caf50; /* Set background color */
+    color: #fff; /* Set text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Button hover styles */
+button:hover {
+    background-color: #45a049; /* Darken background color on hover */
+}
+
+/* Message styles */
+#message {
+    margin-top: 20px; /* Add space above message */
+    color: #4caf50; /* Set text color */
+    font-weight: bold; /* Set font weight to bold */
+}
