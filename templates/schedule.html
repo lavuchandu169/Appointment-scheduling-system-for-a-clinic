@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Medical Appointment</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+</head>
+<body>
+    <h1>Schedule Medical Appointment</h1>
+    <form method="post" action="/schedule">
+        <label for="service">Service:</label>
+        <select id="service" name="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="General Checkup">General Checkup</option>
+            <option value="Dental Cleaning">Dental Cleaning</option>
+            <option value="Eye Examination">Eye Examination</option>
+            <option value="Blood Test">Blood Test</option>
+            <option value="Vaccination">Vaccination</option>
+            <option value="X-ray">X-ray</option>
+            <option value="Ultrasound">Ultrasound</option>
+            <option value="MRI Scan">MRI Scan</option>
+            <option value="Physical Therapy">Physical Therapy</option>
+            <option value="Mental Health Counseling">Mental Health Counseling</option>
+            <!-- Add more options as needed -->
+        </select>
+        <label for="datetime">Date and Time:</label>
+        <input type="datetime-local" id="datetime" name="datetime" required>
+        <button type="submit">Schedule</button>
+    </form>
+</body>
+</html>

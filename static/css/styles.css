@@ -8,14 +8,21 @@ body {
     justify-content: center; /* Center items horizontally */
     height: 100vh; /* Set height to full viewport height */
     background-color: #f4f4f4; /* Set background color */
+    text-align: center;
 }
 
 /* Container styles */
 .container {
     background-color: #fff; /* Set background color */
-    padding: 20px; /* Add padding */
+    padding: 0 20px; /* Add padding */
     border-radius: 8px; /* Add rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    max-width: 800px;
+
+}
+
+.nav {
+    margin-top: 20px;
 }
 
 /* Form styles */
