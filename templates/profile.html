@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+</head>
+<body>
+    <h1>User Profile</h1>
+    <form method="post" action="/profile">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ profile_data[2] }}" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{ profile_data[3] }}" required>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" value="{{ profile_data[4] }}" required>
+        <button type="submit">Update Profile</button>
+    </form>
+</body>
+</html>
