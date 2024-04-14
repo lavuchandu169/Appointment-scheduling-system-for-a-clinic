@@ -111,5 +111,30 @@ def logout():
     session.pop('user_id', None)
     return redirect(url_for('index'))
 
+@app.route('/profile', methods=['GET', 'POST'])
+def profile():
+    if 'user_id' not in session:
+        return redirect(url_for('login')) 
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        phone = request.form['phone']
+        clinic.update_user_profile(session['user_id'], name, email, phone)
+        return redirect(url_for('schedule'))
+    profile_data = clinic.get_user_profile(session['user_id'])
+    return render_template('profile.html', profile_data=profile_data)
+
+@app.route('/schedule', methods=['GET', 'POST'])
+def schedule():
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+    if request.method == 'POST':
+        service = request.form['service']
+        appointment_datetime = request.form['datetime']
+        patient_id = session['user_id']  # Using session['user_id'] directly as patient_id
+        success, message = clinic.schedule_appointment(patient_id, service, appointment_datetime)
+        return render_template('result.html', success=success, message=message)
+    return render_template('schedule.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
