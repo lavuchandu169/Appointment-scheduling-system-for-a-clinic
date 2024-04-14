@@ -7,8 +7,10 @@ body {
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center items horizontally */
     height: 100vh; /* Set height to full viewport height */
-    background-color: #f4f4f4; /* Set background color */
+    background-color: #121010; /* Set background color */
     text-align: center;
+    background: rgb(58,99,180);
+background: linear-gradient(90deg, rgba(58,99,180,1) 7%, rgba(251,0,81,1) 99%);
 }
 
 /* Container styles */
