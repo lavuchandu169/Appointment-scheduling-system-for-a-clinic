@@ -111,5 +111,19 @@ def logout():
     session.pop('user_id', None)
     return redirect(url_for('index'))
 
+@app.route('/profile', methods=['GET', 'POST'])
+def profile():
+    if 'user_id' not in session:
+        return redirect(url_for('login')) 
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        phone = request.form['phone']
+        clinic.update_user_profile(session['user_id'], name, email, phone)
+        return redirect(url_for('schedule'))
+    profile_data = clinic.get_user_profile(session['user_id'])
+    return render_template('profile.html', profile_data=profile_data)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
