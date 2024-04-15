@@ -10,7 +10,7 @@ body {
     background-color: #121010; /* Set background color */
     text-align: center;
     background: rgb(58,99,180);
-background: linear-gradient(90deg, rgba(58,99,180,1) 7%, rgba(251,0,81,1) 99%);
+    background: linear-gradient(90deg, rgba(58,99,180,1) 7%, rgba(251,0,81,1) 99%);
 }
 
 /* Container styles */
