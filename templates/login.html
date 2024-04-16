@@ -7,10 +7,11 @@
     <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
 </head>
 <body>
+    <div class="container">
+        <!-- Back Button -->
+        <button onclick="history.back()" style="position: absolute; top: 10px; left: 10px;">Back</button>
+        </div>
     <h1>Login</h1>
-    {% if error %}
-    <p class="error">{{ error }}</p>
-    {% endif %}
     <form method="post" action="/login">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
