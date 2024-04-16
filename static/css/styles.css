@@ -27,6 +27,21 @@ body {
     margin-top: 20px;
 }
 
+
+.btn {
+    padding: 8px 15px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
 /* Form styles */
 form {
     display: flex; /* Use flexbox for layout */
