@@ -45,7 +45,7 @@ git clone https://github.com/yourusername/clinic-appointment-system.git
 
 4. **Install dependencies:**
 
-   pip install flask sqlite3
+   pip install pysqlite3 
 
 6. **Run the application:**
 
