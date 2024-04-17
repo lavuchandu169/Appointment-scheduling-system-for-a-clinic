@@ -1,84 +1,115 @@
-/* Body styles */
+/* General Body Styles */
 body {
-    font-family: Arial, sans-serif; /* Set font family */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    height: 100vh; /* Set height to full viewport height */
-    background-color: #121010; /* Set background color */
-    text-align: center;
-    background: rgb(58,99,180);
-    background: linear-gradient(90deg, rgba(58,99,180,1) 7%, rgba(251,0,81,1) 99%);
+    font-family: Arial, sans-serif; /* Set the typeface used throughout the body */
+    margin: 0; /* Remove the default margin from the body */
+    padding: 0; /* Remove the default padding from the body */
+    display: flex; /* Use flexbox layout model for direct children */
+    align-items: center; /* Vertically center all child elements */
+    justify-content: center; /* Horizontally center all child elements */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center text alignment for all child elements */
+    background: linear-gradient(90deg, rgba(58,99,180,1) 7%, rgba(251,0,81,1) 99%); /* Background with linear gradient */
 }
 
-/* Container styles */
-.container {
-    background-color: #fff; /* Set background color */
-    padding: 0 20px; /* Add padding */
-    border-radius: 8px; /* Add rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
-    max-width: 800px;
-
-}
-
+/* Navigation Section */
 .nav {
-    margin-top: 20px;
+    margin-top: 20px; /* Space above the navigation section */
 }
 
-
+/* General Button Styles */
 .btn {
-    padding: 8px 15px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    display: inline-block;
+    padding: 10px 20px; /* Padding inside the button */
+    color: #fff; /* Text color */
+    background-color: #007bff; /* Background color */
+    border: none; /* No borders */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* No underlines */
+    transition: background-color 0.3s ease; /* Smooth transition for the background color */
 }
 
+/* Hover state for buttons */
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darken the button background on hover */
 }
 
-/* Form styles */
+/* Styles for navigation buttons container */
+.nav-buttons {
+    position: absolute; /* Position absolutely within its closest relative parent */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+}
+
+/* Container Styles */
+.container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically within the container */
+    align-items: center; /* Center children horizontally within the container */
+    text-align: center; /* Text align center for all texts within the container */
+    height: 100%; /* Full height of the parent element */
+}
+
+/* Header Section Styles */
+.header {
+    margin-bottom: 20px; /* Space below the header */
+}
+
+/* Styles for form elements */
 form {
     display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Arrange items in column */
+    flex-direction: column; /* Arrange children in a vertical stack */
 }
 
-/* Label styles */
+/* Label Styles */
 label {
-    margin-bottom: 8px; /* Add space below labels */
+    margin-bottom: 8px; /* Space below each label */
 }
 
-/* Input styles */
+/* Input Field Styles */
 input {
-    padding: 8px; /* Add padding */
-    margin-bottom: 16px; /* Add space below inputs */
-    border: 1px solid #ccc; /* Add border */
-    border-radius: 4px; /* Add rounded corners */
+    padding: 8px; /* Padding inside input fields */
+    margin-bottom: 16px; /* Space below each input field */
+    border: 1px solid #ccc; /* Border around input fields */
+    border-radius: 4px; /* Rounded corners for input fields */
 }
 
-/* Button styles */
+/* General Styles for Buttons within forms */
 button {
-    padding: 10px; /* Add padding */
-    background-color: #4caf50; /* Set background color */
-    color: #fff; /* Set text color */
-    border: none; /* Remove border */
-    border-radius: 4px; /* Add rounded corners */
-    cursor: pointer; /* Change cursor to pointer */
+    padding: 10px; /* Padding inside the button */
+    background-color: #4caf50; /* Background color */
+    color: #fff; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
-/* Button hover styles */
+/* Hover State for Buttons */
 button:hover {
-    background-color: #45a049; /* Darken background color on hover */
+    background-color: #45a049; /* Darken the background on hover */
 }
 
-/* Message styles */
+/* Back Button Styles */
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover state for the Back button */
+.back-button:hover {
+    background-color: #e2e6ea;
+}
+
+/* Styles for Displaying Messages */
 #message {
-    margin-top: 20px; /* Add space above message */
-    color: #4caf50; /* Set text color */
-    font-weight: bold; /* Set font weight to bold */
+    margin-top: 20px; /* Space above the message */
+    color: #4caf50; /* Text color for messages */
+    font-weight: bold; /* Bold text for emphasis */
 }
