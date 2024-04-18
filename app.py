@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, session, url_for
 import sqlite3
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Necessary for session management
+app.secret_key = 'your_secret_key'  # Necessary for session managemen
 
 # Define the Clinic class with database interactions
 class Clinic:
