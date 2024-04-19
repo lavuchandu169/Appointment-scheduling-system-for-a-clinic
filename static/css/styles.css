@@ -113,3 +113,10 @@ button:hover {
     color: #4caf50; /* Text color for messages */
     font-weight: bold; /* Bold text for emphasis */
 }
+
+.schedule-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

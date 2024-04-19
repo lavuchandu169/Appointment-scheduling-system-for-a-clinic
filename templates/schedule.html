@@ -6,15 +6,17 @@
     <title>Schedule Medical Appointment</title>
     <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
 </head>
-<body>
-    <div class="container">
+<body class = "schedule-body">
+    <!-- <div class="container"> -->
         <!-- Back Button -->
         <button onclick="history.back()" style="position: absolute; top: 10px; left: 10px;">Back</button>
-        </div>
-        <div style="position: absolute; top: 10px; right: 10px;">
-    <div style="position: absolute; top: 10px; right: 10px;">
-            <a href="/" class="btn">logout</a>
-        </div>
+        <!-- </div> -->
+        <!-- <div style="position: absolute; top: 10px; right: 10px;"> -->
+    <!-- <div style="position: absolute; top: 10px; right: 10px;"> -->
+            <a href="/" style="position: absolute; top: 10px; right: 10px;"class="btn">logout
+            </a>
+        <!-- </div> -->
+        <div>
     <h1>Schedule Medical Appointment</h1>
     <form method="post" action="/schedule">
         <label for="service">Service:</label>
@@ -36,5 +38,6 @@
         <input type="datetime-local" id="datetime" name="datetime" required>
         <button type="submit">Schedule</button>
     </form>
+</div>
 </body>
 </html>
