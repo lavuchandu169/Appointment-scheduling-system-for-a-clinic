@@ -1,6 +1,6 @@
 /* General Body Styles */
 body {
-    font-family: Arial, sans-serif; /* Set the typeface used throughout the body */
+    font-family: Arial, sans-serif;
     margin: 0; /* Remove the default margin from the body */
     padding: 0; /* Remove the default padding from the body */
     display: flex; /* Use flexbox layout model for direct children */
