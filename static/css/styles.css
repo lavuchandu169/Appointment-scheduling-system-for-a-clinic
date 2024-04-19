@@ -8,7 +8,7 @@ body {
     justify-content: center; /* Horizontally center all child elements */
     height: 100vh; /* Full viewport height */
     text-align: center; /* Center text alignment for all child elements */
-    background: linear-gradient(90deg, rgba(58,99,180,1) 7%, rgba(251,0,81,1) 99%); /* Background with linear gradient */
+    background: linear-gradient(90deg, rgba(58,99,180,1) 7%, rgb(3, 255, 120) 99%); /* Background with linear gradient */
 }
 
 /* Navigation Section */
