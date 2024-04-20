@@ -37,7 +37,7 @@ To get this project running on your local machine, follow these steps:
 
 1. **Clone the repository:**
 
-git clone https://github.com/lavuchandu169/clinic-appointment-system.git
+ git clone https://github.com/lavuchandu169/programming-for-information-systems-CA-Appointment-scheduling-system-for-a-clinic.git
 
 2. **Navigate into the project directory:**
    
