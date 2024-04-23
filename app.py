@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, session, url_for
 import sqlite3
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Necessary for session managemen
+app.secret_key = 'your_secret_key'  # Necessary for session management
 
 # Define the Clinic class with database interactions
 class Clinic:
@@ -21,9 +21,9 @@ class Clinic:
         self.conn.execute('''CREATE TABLE IF NOT EXISTS patients (
                             id INTEGER PRIMARY KEY,
                             user_id INTEGER,
-                            name TEXT NOT NULL,
-                            email TEXT NOT NULL UNIQUE,
-                            phone TEXT NOT NULL,
+                            name TEXT,
+                            email TEXT UNIQUE,
+                            phone TEXT,
                             FOREIGN KEY (user_id) REFERENCES users(id)
                         )''')
         self.conn.execute('''CREATE TABLE IF NOT EXISTS appointments (
@@ -41,7 +41,11 @@ class Clinic:
             cursor = self.conn.cursor()
             cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
             self.conn.commit()
-            return cursor.lastrowid
+            user_id = cursor.lastrowid
+            # Initialize patient data when creating a new user
+            cursor.execute("INSERT INTO patients (user_id, name, email, phone) VALUES (?, '', '', '')", (user_id,))
+            self.conn.commit()
+            return user_id
         return None
 
     def check_user_existence(self, username):
@@ -93,7 +97,7 @@ def register():
         user_id = clinic.register_user(username, password)
         if user_id:
             session['user_id'] = user_id
-            return redirect(url_for('login'))
+            return redirect(url_for('profile'))
         else:
             return render_template('register.html', error="Username already exists. Please choose a different username.")
     return render_template('register.html')
@@ -141,12 +145,10 @@ def schedule():
     if request.method == 'POST':
         service = request.form['service']
         datetime = request.form['datetime']
-        patient_id = session['user_id']  # Using session['user_id'] directly as patient_id
+        patient_id = session['user_id']  # Correctly assuming session['user_id'] is the same as patient_id
         success, message = clinic.schedule_appointment(patient_id, service, datetime)
         return render_template('result.html', success=success, message=message)
     return render_template('schedule.html')
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
